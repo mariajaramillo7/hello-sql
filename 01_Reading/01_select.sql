@@ -3,13 +3,15 @@ SELECT
 Lección 8: https://youtu.be/OuJerKzV5T0?t=5618
 */
 
--- Extrae/obtiene datos de una base de datos 
+--- Extrae/obtiene datos de una base de datos 
+SELECT _column1_, _column2, ..._  
+FROM _table_name_;
 
--- Obtiene todos los datos de la tabla "users"
+- Obtiene todos los datos de la tabla "users"
 SELECT * FROM users;
 
--- Obtiene todos los nombres de la tabla "users"
+- Obtiene todos los nombres de la tabla "users"
 SELECT name FROM users;
 
--- Obtiene todos los identificadores y nombres de la tabla "users"
+- Obtiene todos los identificadores y nombres de la tabla "users"
 SELECT user_id, name FROM users;
