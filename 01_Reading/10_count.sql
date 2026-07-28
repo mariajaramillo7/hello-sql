@@ -14,3 +14,6 @@ SELECT COUNT(DISTINCT column_name) FROM database;
 
 
 SELECT **COUNT(*column1*) FROM Customers;
+
+-- Query to count unique product tags in Miami
+SELECT COUNT(DISTINCT tags) FROM products WHERE city = 'Miami'
