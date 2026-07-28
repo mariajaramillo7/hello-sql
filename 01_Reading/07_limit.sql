@@ -3,6 +3,9 @@ LIMIT
 Lección 9.6: https://youtu.be/OuJerKzV5T0?t=7395
 */
 
+
+Siempre al conocer los datos empezar con LIMIT para evitar overwhelm tu output.
+  
 -- Obtiene las 3 primeras filas de la tabla "users"
 SELECT * FROM users LIMIT 3;
 
