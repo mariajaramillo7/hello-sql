@@ -9,11 +9,8 @@ Select COUNT(*) FROM users;
 -- Cuenta cuantas filas contienen un dato no nulo en el campo edad de la tabla "users"
 Select COUNT(age) FROM users;
 
--- Contar # de unique quieres de una columna.
+-- Contar # de registros únicos de una columna.
 SELECT COUNT(DISTINCT column_name) FROM database;
 
-
-SELECT **COUNT(*column1*) FROM Customers;
-
--- Query to count unique product tags in Miami
+-- Ejemplo: contar tags únicas en Miami
 SELECT COUNT(DISTINCT tags) FROM products WHERE city = 'Miami'
