@@ -3,7 +3,7 @@ LIMIT
 Lección 9.6: https://youtu.be/OuJerKzV5T0?t=7395
 */
 
-Limita # de registros a extraer. Es bueno siempre empezar con LIMIT al empezar a conocer los datos para evitar overwhelm tu output.
+--- Limita # de registros a extraer. Es bueno siempre empezar con LIMIT al empezar a conocer los datos para evitar overwhelm tu output.
 Se hace con LIMIT, SELECT TOP o FETCH FIRST dependiendo del programa.
 - OFFSET: decirle cuántas filas saltarse antes de empezar a regresar datos del query. 
 
