@@ -25,16 +25,6 @@ LIMIT number;
 - Obtiene las 2 primeras filas de la tabla "users" con email distinto a sara@gmail.com o edad igual a 15
 SELECT * FROM users WHERE NOT email = 'sara@gmail.com' OR age = 15 LIMIT 2;
 
-# SELECT TOP: Microsoft SQL Server and MS Access. Supports percentaje e.g. SELECT TOP 10 PERCENT
-
-- Returns the first 10 rows
-SELECT TOP 10 * FROM Employees ORDER BY Salary DESC;
-
-- Returns the top 10% of rows
-SELECT TOP 10 PERCENT * FROM Employees ORDER BY Salary DESC;
-
-
-
 # SELECT TOP: MS SQL Server, MS Access
   - No permite offsets → requiere OFFSET-FETCH
   - Maneja porcentajes (TOP 10 PERCENT) y empates (TOP 10 WITH TIES)
@@ -47,6 +37,7 @@ WHERE condition;
 - SELECT TOP 50 PERCENT * FROM Customers;
 - SELECT TOP 3 * FROM Customers
   WHERE Country = 'Germany';
+- SELECT TOP 10 * FROM Employees ORDER BY Salary DESC;
 
 # FETCH FIRST: oficial standard ANSI SQL. Uso: Oracle, DB2, PostgreSQL
   - Permite offsets (OFFSET 20 ROWS FETCH)
