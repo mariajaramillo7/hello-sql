@@ -45,6 +45,27 @@ FROM Products
 GROUP BY CategoryID;
 
 # COUNT
+Te dice el # de filas que cumplen un criterio específico. 
+
+SELECT COUNT([DISTINCT] column_name | *)
+FROM table_name
+WHERE condition;
+
+Se pueden usar distintos argumentos en el paréntesis:
+COUNT(*) - Counts the total number of rows in a table (including NULL values).
+COUNT(columnname) - Counts all non-null values in the column.
+COUNT(DISTINCT columnname) - Counts only the unique, non-null values in the column.
+
+Puedes juntarlo con WHERE 
+  SELECT COUNT(ProductID)
+FROM Products
+WHERE Price > 20;
+
+Se puede usar junto con GROUP BY para contar por cada categoría. 
+SELECT COUNT(*) AS [Number of records], CategoryID
+FROM Products
+GROUP BY CategoryID;
+
 -- Cuenta cuantas filas contiene la tabla "users"
 Select COUNT(*) FROM users;
 
@@ -59,9 +80,46 @@ SELECT COUNT(DISTINCT tags) FROM products WHERE city = 'Miami'
 
 
 # SUM
+Suma todos los valores de una columna numérica. Ignora valores NULL.
+
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+
+Se puede agregar una condición con WHERE
+  
+Se puede usar junto con GROUP BY para regresar suma de cada categoría
+SELECT OrderID, SUM(Quantity) AS [Total Quantity]
+FROM OrderDetails
+GROUP BY OrderID;
+
+Se puede hacer un cálculo dentro del parámetro 
+SELECT SUM(Quantity * 10)
+FROM OrderDetails;
+
+
+  
 -- Suma todos los valores del campo edad de la tabla "users"
 Select SUM(age) FROM users;
 
 # AVG
+Cálcula el promedio de una columna numérica. Ignora valores NULL. 
+
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+Se puede agregar una condición con WHERE
+  
+Se puede usar junto con GROUP BY para regresar promedo de cada categoría
+SELECT AVG(Price) AS AveragePrice, CategoryID
+FROM Products
+GROUP BY CategoryID;
+
+Higher than average: list all records with a higher price than average
+SELECT * FROM Products
+WHERE Price > (SELECT AVG(Price) FROM Products);
+  
+
 -- Obtiene la media de edad de la tabla "users"
 Select AVG(age) FROM users;
