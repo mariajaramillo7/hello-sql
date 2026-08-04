@@ -5,9 +5,15 @@ Lección 9.4: https://youtu.be/OuJerKzV5T0?t=6894
 
 --- Busca un patrón de texto específico en una columna.
 Se usa con WHERE para encontrar coincidencias parciales usando wildcards (comodines).
- - Signo de porcentaje (%): Representa cero, uno o varios caracteres
- - Guion bajo (_): Representa un solo carácter exacto
 
+ Wildcards: se usa para sustituir uno o más caracteres en un string
+ %	Represents zero, one or more characters
+_	Represents a single character
+[]	Represents any single character within the brackets → no sirve en PostgreSQL ni MySQL
+^	Represents any character not in the brackets → no sirve en PostgreSQL ni MySQL
+-	Represents any single character within the specified range → no sirve en PostgreSQL ni MySQL
+{}	Represents any escaped character ** → solo en Oracle databases 
+ 
  Si no usas wildcard, solo da un resultado cuando hay un exact match.
  
 SELECT column1, column2, ...
@@ -26,6 +32,10 @@ SELECT * FROM users WHERE email LIKE '%@%';
 - Return all customers that starts with 'a' or starts with 'b':
 SELECT * FROM Customers
 WHERE CustomerName LIKE 'a%' OR CustomerName LIKE 'b%';
+
+- Select all records where the value of the City column does NOT start with the letter "a".
+SELECT * FROM Customers 
+ WHERE City NOT LIKE 'a%';
 
 - Return all customers that starts with "a" and are at least 3 characters in length:
 SELECT * FROM Customers
