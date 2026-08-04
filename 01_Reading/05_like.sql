@@ -7,7 +7,13 @@ Lección 9.4: https://youtu.be/OuJerKzV5T0?t=6894
 Se usa con WHERE para encontrar coincidencias parciales usando wildcards (comodines).
  - Signo de porcentaje (%): Representa cero, uno o varios caracteres
  - Guion bajo (_): Representa un solo carácter exacto
+
+ Si no usas wildcard, solo da un resultado cuando hay un exact match.
  
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+
 - Obtiene todos datos de la tabla "users" que contienen un email con el texto "gmail.com" en su parte final
 SELECT * FROM users WHERE email LIKE '%gmail.com';
 
@@ -16,3 +22,11 @@ SELECT * FROM users WHERE email LIKE 'sara%';
 
 - Obtiene todos datos de la tabla "users" que contienen un email una arroba
 SELECT * FROM users WHERE email LIKE '%@%';
+
+- Return all customers that starts with 'a' or starts with 'b':
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%' OR CustomerName LIKE 'b%';
+
+- Return all customers that starts with "a" and are at least 3 characters in length:
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a__%';
