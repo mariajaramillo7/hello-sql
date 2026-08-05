@@ -6,7 +6,7 @@ Lección 9.4: https://youtu.be/OuJerKzV5T0?t=6894
 --- Busca un patrón de texto específico en una columna.
 Se usa con WHERE para encontrar coincidencias parciales usando wildcards (comodines).
 
- Wildcards: se usa para sustituir uno o más caracteres en un string
+ Wildcards: se usa para sustituir uno o más caracteres en un string. Se pueden combinar.
  %	Represents zero, one or more characters
 _	Represents a single character
 []	Represents any single character within the brackets → no sirve en PostgreSQL ni MySQL
@@ -40,3 +40,15 @@ SELECT * FROM Customers
 - Return all customers that starts with "a" and are at least 3 characters in length:
 SELECT * FROM Customers
 WHERE CustomerName LIKE 'a__%';
+
+- Return all customers starting with either b, s, or p
+SELECT * FROM Customers
+WHERE CustomerName LIKE '[bsp]%';
+
+- Return all customers starting with "a", "b", "c", "d", "e" or "f":
+SELECT * FROM Customers
+WHERE CustomerName LIKE '[a-f]%';
+
+- Select all records where the first letter of the City is NOT an "a" or a "c" or an "f".
+SELECT * FROM Customers
+WHERE City LIKE '[!acf]%';
