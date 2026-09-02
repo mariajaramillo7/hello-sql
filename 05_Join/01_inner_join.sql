@@ -5,16 +5,19 @@ INNER JOIN (JOIN)
 Lección 17.1: https://youtu.be/OuJerKzV5T0?t=16101
 */
 
+Obtiene datos comunes (filas que coinciden) de 2 o más tablas. Pueden ir en ambos sentidos (cualquiera de las dos tablas seleccionada, pero la que ponga primero en SELECT sale de primera).
+En la mayoría de bases de datos INNER JOIN es lo mismo que JOIN. 
+  
 -- Realiza un JOIN de manera incorrecta, ya que no existe un campo de relación
 SELECT * FROM users
 INNER JOIN dni;
 
--- Obtiene los datos de los usuarios que tienen un dni 
+-- Obtiene los datos de los usuarios que tienen un dni. Solo me muestra las filas que coinciden. 
 SELECT * FROM users
 INNER JOIN dni
 ON users.user_id = dni.user_id;
 
--- Obtiene los datos de los usuarios que tienen un dni (JOIN es lo mismo que INNER JOIN)
+-- Obtiene los datos de los usuarios que tienen un dni 
 SELECT * FROM users
 JOIN dni
 ON users.user_id = dni.user_id;
@@ -46,7 +49,7 @@ FROM users_languages
 JOIN users ON users_languages.user_id=users.user_id
 JOIN languages ON users_languages.language_id=languages.language_id;
 
--- Obtiene los nombres de usuarios junto a los lenguajes que conocen (utilizando otro orden de relación entre tablas)
+-- Obtiene los nombres de usuarios junto a los lenguajes que conocen (utilizando otro orden de relación entre tablas, da el mismo resultado)
 SELECT users.name, languages.name
 FROM users
 JOIN users_languages ON users.user_id=users_languages.user_id
