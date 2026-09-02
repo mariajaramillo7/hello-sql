@@ -3,12 +3,12 @@ UNION (FULL JOIN)
 Lección 17.4: https://youtu.be/OuJerKzV5T0?t=17536
 */
 
--- UNION elimina duplicados
-
 Obtiene todo lo de todas las tablas que estás uniendo, haya o no relaciones. 
-Statements funcionan igual que con INNER JOIN. 
-
-  En algunas DB sale como  FULL OUTER JOIN
+El problema es que en MySQL en concreto no existe este concepto de FULL JOIN - existe comando UNION (unir todo lo de una tabla con todo lo de otra tabla, PERO tengo que decirle con qué relacionarlo)
+En algunas DB sale como  FULL OUTER JOIN
+  
+-- UNION elimina duplicados
+-- UNION ALL mantiene duplicados
   
 -- Obtiene todos los id de usuarios de las tablas dni y usuarios (exista o no relación)
 SELECT users.user_id AS u_user_id, dni.user_id AS d_user_id
@@ -32,4 +32,3 @@ FROM users
 RIGHT JOIN dni
 ON users.user_id = dni.user_id;
 
--- UNION ALL mantiene duplicados
