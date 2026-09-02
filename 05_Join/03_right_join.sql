@@ -3,6 +3,9 @@ RIGHT JOIN
 Lección 17.3: https://youtu.be/OuJerKzV5T0?t=17399
 */
 
+Obtiene todo lo de la tabla de la derecha + datos comunes. 
+Statements funcionan igual que con INNER JOIN. 
+  
 -- Obtiene todos los dni junto a su usuario (lo tenga o no)
 SELECT * FROM users
 RIGHT JOIN dni
