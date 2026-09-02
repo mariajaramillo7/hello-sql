@@ -1,3 +1,5 @@
+# JOIN: relaciona dos o más tablas 
+
 /*
 INNER JOIN (JOIN)
 Lección 17.1: https://youtu.be/OuJerKzV5T0?t=16101
