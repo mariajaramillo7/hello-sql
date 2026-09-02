@@ -3,6 +3,9 @@ LEFT JOIN
 Lección 17.2: https://youtu.be/OuJerKzV5T0?t=17045
 */
 
+Obtiene todo lo de la tabla de la izquierda + datos comunes. 
+Statements funcionan igual que con INNER JOIN. 
+  
 -- Obtiene los datos de todos los usuarios junto a su dni (lo tenga o no)
 SELECT * FROM users
 LEFT JOIN dni
