@@ -57,8 +57,8 @@ CREATE TABLE languages(
 -- Un usuario puede conoces muchos lenguajes. Un lenguaje puede ser conocido por muchos usuarios.
 CREATE TABLE users_languages(
 	users_language_id int AUTO_INCREMENT PRIMARY KEY,
-    user_id int,
-    language_id int,
+    user_id int NOT NULL,
+    language_id int NOT NULL,
     FOREIGN KEY(user_id) REFERENCES users(user_id),
     FOREIGN KEY(language_id) REFERENCES languages(language_id),
     UNIQUE (user_id, language_id)
