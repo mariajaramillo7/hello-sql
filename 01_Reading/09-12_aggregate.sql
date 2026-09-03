@@ -1,7 +1,7 @@
 # AGGREGATE FUNCTIONS 
   Realizan cálculos. 
   Se usan comúnmente junto con GROUP BY para dividir el resultado en grupos y luego con el aggregate function se regresa un valor único para cada grupo. 
-
+  También se pueden usar con HAVING para filtrar los grupos.
 
 COUNT() - returns the number of rows in a set
 SUM() - returns the sum of a numerical column
