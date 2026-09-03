@@ -4,6 +4,8 @@ Lección 10.12: https://youtu.be/OuJerKzV5T0?t=9265
 */
 
 - Filtra grupos de registros creados por la cláusula GROUP BY, usando funciones de agregación como COUNT, SUM o AVG.
+  Similar a WHERE pero aplicado después de agrupar. 
+  
 SELECT column1, aggregate_function(column2), column3, ...
 FROM table_name
 WHERE condition
