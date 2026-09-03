@@ -5,9 +5,10 @@
 Conexión desde código - se puede hacer con cualquier lenguaje de programación. 
 
 # Ejemplo de conexión desde Python a una base de datos local
-# Se ejemplifica cómo evitar SQL INJECTION
+# Se ejemplifica cómo evitar SQL INJECTION - Una de las formas más comunes en que un atacante puede entrar a datos de nuestra DB.
+    
+    
 import mysql.connector
-
 
 def print_user(user):
 
