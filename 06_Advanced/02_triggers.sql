@@ -3,6 +3,20 @@ TRIGGERS
 Lección 18.2: https://youtu.be/OuJerKzV5T0?t=18961
 */
 
+Instrucciones que se ejecutan automáticamente cuando ocurren eventos en una tabla.
+
+CREATE TRIGGER tg_name
+BEFORE/AFTER INSERT/UPDATE/DELETE
+ON table_name
+FOR EACH ROW # (se ejecuta en todas las filas)
+BEGIN
+	IF X THEN
+		INSERT INTO X
+		VALUES X
+	END IF;
+END//
+
+	
 -- Crea una tabla de historial para usar en el ejemplo
 CREATE TABLE `hello_mysql`.`email_history` (
 `email_history_id` INT NOT NULL AUTO_INCREMENT,
