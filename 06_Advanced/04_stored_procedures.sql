@@ -3,6 +3,8 @@ STORED PROCEDURES
 Lección 18.4: https://youtu.be/OuJerKzV5T0?t=20033
 */
 
+Es como una query que guardamos en favoritos - para querys que se usan mucho. 
+	
 -- Crea un procedimiento almacenado llamado "p_all_users" que obtiene todos los datos de "users"
 DELIMITER //
 CREATE PROCEDURE p_all_users()
@@ -15,6 +17,8 @@ CALL p_all_users;
 
 -- Crea un procedimiento almacenado llamado "p_age_users" parametrizado para
 -- obtener usuarios con edad variable
+Siempre darle un nombre distinto al parámetro (e.g age_param) al campo.
+	
 DELIMITER //
 CREATE PROCEDURE p_age_users(IN age_param int)
 BEGIN
