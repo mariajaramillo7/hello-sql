@@ -1,3 +1,5 @@
+# Sentencias DML (Data Manipulation Language) permiten modificar los datos almacenados
+  
 /*
 INSERT
 Lección 11.1: https://youtu.be/OuJerKzV5T0?t=10370
