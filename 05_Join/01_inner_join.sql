@@ -1,4 +1,4 @@
-# JOIN: relaciona dos o más tablas 
+# JOIN: relaciona dos o más tablas. Combina filas de dos o más tablas basándose en una columna común.
 
 /*
 INNER JOIN (JOIN)
