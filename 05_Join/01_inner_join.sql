@@ -1,4 +1,8 @@
 # JOIN: relaciona dos o más tablas. Combina filas de dos o más tablas basándose en una columna común.
+SELECT A.columna, B.columna
+FROM TablaA A
+[INNER|LEFT|RIGHT] JOIN TablaB B
+ON A.col_comun = B.col_comun;
 
 /*
 INNER JOIN (JOIN)
