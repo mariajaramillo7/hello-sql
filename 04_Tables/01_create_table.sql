@@ -3,6 +3,10 @@ CREATE TABLE
 Lección 13.1: https://youtu.be/OuJerKzV5T0?t=11292
 */
 
+Crea una nueva tabla dentro de la DB seleccionada
+	Especificas columnas y tipos de datos 
+	Opcionalmente restricciones (constraints) como PK, NN, etc
+
 -- Crea una tabla llamada "persons" con nombre de columna (atributos) de tipo int, varchar y date
 CREATE TABLE persons (
 	id int,
