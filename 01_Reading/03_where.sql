@@ -14,6 +14,7 @@ Operadores:
   - BETWEEN: entre un rango específico
   - LIKE: patrón 
   - IN: especifica múltiples valores posibles para una columna 
+  - LÓGICOS: AND, OR, NOT
 
 - Filtra todos los datos de la tabla "users" con edad igual a 15
 SELECT * FROM users WHERE age = 15;
