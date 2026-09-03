@@ -2,6 +2,8 @@
 # Lección 19.1: https://youtu.be/OuJerKzV5T0?t=20876
 # Lección 19.2: https://youtu.be/OuJerKzV5T0?t=21149
 
+Conexión desde código - se puede hacer con cualquier lenguaje de programación. 
+
 # Ejemplo de conexión desde Python a una base de datos local
 # Se ejemplifica cómo evitar SQL INJECTION
 import mysql.connector
