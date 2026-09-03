@@ -9,3 +9,7 @@ Crea una nueva base de datos.
   
 -- Crea una base de datos llamada "test"
 CREATE DATABASE test;
+
+
+# USE
+Selecciona una DB para que las siguientes operaciones se ejecuten en ella.
