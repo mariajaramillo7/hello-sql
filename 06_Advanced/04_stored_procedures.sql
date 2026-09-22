@@ -4,7 +4,27 @@ Lección 18.4: https://youtu.be/OuJerKzV5T0?t=20033
 */
 
 Es como una query que guardamos en favoritos - para querys que se usan mucho. 
-	
+
+CREATE PROCEDURE procedure_name
+  @param1 datatype,
+  @param2 datatype
+AS
+BEGIN
+  -- SQL_statements to be executed
+  SELECT column1, column2
+  FROM table_name
+  WHERE columnN = @paramN;
+END;
+
+To run a stored procedure, use the EXEC statement:
+EXEC procedure_name @param1 = 'value1', @param2 = 'value2';
+
+To delete a stored procedure, use the DROP PROCEDURE statement:
+DROP PROCEDURE procedure_name; 
+
+Tip: To ensure that DROP PROCEDURE does not return an error, if the procedure is missing, add the IF EXISTS clause:
+DROP PROCEDURE IF EXISTS procedure_name; 
+
 -- Crea un procedimiento almacenado llamado "p_all_users" que obtiene todos los datos de "users"
 DELIMITER //
 CREATE PROCEDURE p_all_users()
