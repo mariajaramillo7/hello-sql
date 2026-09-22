@@ -32,6 +32,10 @@ SELECT * FROM users WHERE email IS NOT NULL;
 -- Obtiene todos datos de la tabla "users" de la tabla "users" con email no nulo y edad igual a 15
 SELECT * FROM users WHERE email IS NOT NULL AND age = 15;
 
+Remove a NOT NULL CONSTRAINT 
+ ALTER TABLE Persons
+MODIFY COLUMN Age int NULL; 
+
 /*
 IFNULL
 Lección 10.14: https://youtu.be/OuJerKzV5T0?t=10023
