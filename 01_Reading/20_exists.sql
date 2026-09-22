@@ -1,0 +1,16 @@
+The EXISTS operator is used in a WHERE clause to check whether a subquery returns any rows.
+
+The EXISTS operator evaluates to TRUE if the subquery returns at least one row, and FALSE otherwise.
+
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS (subquery); 
+
+--- The following SQL checks if any suppliers has a product with a price lower than 10. If the subquery evaluates to TRUE; list the suppliers with a product price less than 10:
+SELECT SupplierName
+FROM Suppliers
+WHERE EXISTS (
+  SELECT ProductName
+  FROM Products
+  WHERE Products.SupplierID = Suppliers.supplierID AND Price < 10
+); 
