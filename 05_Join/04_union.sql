@@ -3,7 +3,14 @@ UNION (FULL JOIN)
 Lección 17.4: https://youtu.be/OuJerKzV5T0?t=17536
 */
 
-Obtiene todo lo de todas las tablas que estás uniendo, haya o no relaciones. 
+Obtiene todo lo de todas las tablas que estás uniendo, haya o no relaciones. Sale como FULL JOIN o FULL OUTER JOIN
+
+  SELECT column_name(s)
+FROM table1
+FULL JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+
 El problema es que en MySQL en concreto no existe este concepto de FULL JOIN - existe comando UNION (unir todo lo de una tabla con todo lo de otra tabla, PERO tengo que decirle con qué relacionarlo)
 El operador UNION permite combinar verticalmente los resultados de dos o más
 consultas SELECT. Las columnas de las consultas a unir deben ser del mismo
