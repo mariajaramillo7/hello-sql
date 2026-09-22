@@ -14,3 +14,7 @@ Note: In most databases you cannot drop a table that is referenced by a foreign 
   
 -- Elimina la tabla llamada "persons8"
 DROP TABLE persons8;
+
+
+Truncate table. The TRUNCATE TABLE statement is used to delete all the records in a table, but it keeps the table structure, columns and constraints.
+ TRUNCATE TABLE table_name; 
