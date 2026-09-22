@@ -1,0 +1,23 @@
+The SELECT INTO statement is used to create a new table and fill it with data from an existing table.
+The SELECT INTO statement is useful for creating backups or for creating a temporary table for analysis.
+Note: The new table will be created with the same column names and data types as defined in the source table. However, primary keys, indexes, or NOT NULL constraints are not automatically transferred.
+
+Copy entire table into a new table:
+SELECT * INTO newtable [IN external_db]
+FROM sourcetable
+WHERE condition;
+
+Copy only some columns into a new table:
+SELECT column1, column2, column3, ...
+INTO newtable [IN external_db]
+FROM sourcetable
+WHERE condition; 
+
+SELECT INTO can also be used to create a new, empty table using the schema of another. Just add a WHERE clause that causes the query to return no data:
+SELECT * INTO newtable
+FROM sourcetable
+WHERE 1 = 0;
+
+
+
+
