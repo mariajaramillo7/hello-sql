@@ -5,6 +5,12 @@ Lección 17.4: https://youtu.be/OuJerKzV5T0?t=17536
 
 Obtiene todo lo de todas las tablas que estás uniendo, haya o no relaciones. Sale como FULL JOIN o FULL OUTER JOIN
 
+  SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2; 
+
+Note: If some customers or suppliers have the same country, each country will only be listed once, because UNION selects only distinct values. Use UNION ALL to also select duplicate values!
+  
   SELECT column_name(s)
 FROM table1
 FULL JOIN table2
@@ -44,6 +50,16 @@ ON users.user_id = dni.user_id
 UNION
 SELECT *
 FROM users
-RIGHT JOIN dni
+
+  RIGHT JOIN dni
 ON users.user_id = dni.user_id;
+
+  -- Union ALL
+The following SQL returns all the countries (also duplicate values) from both the "Customers" and the "Suppliers" table:
+  SELECT Country FROM Customers
+UNION ALL
+SELECT Country FROM Suppliers
+ORDER BY Country;
+
+
 
