@@ -7,6 +7,20 @@ Crea una nueva tabla dentro de la DB seleccionada
 	Especificas columnas y tipos de datos 
 	Opcionalmente restricciones (constraints) como PK, NN, etc
 
+CREATE TABLE table_name (
+  column1 datatype constraint,
+  column2 datatype constraint,
+  column3 datatype constraint,
+  ....
+); 
+
+Create new table from existing table: 
+CREATE TABLE new_table AS
+SELECT column1, column2,...
+FROM existing_table
+WHERE ....; 
+
+	
 -- Crea una tabla llamada "persons" con nombre de columna (atributos) de tipo int, varchar y date
 CREATE TABLE persons (
 	id int,
@@ -48,6 +62,14 @@ CREATE TABLE persons3 (
     created datetime,
     UNIQUE(id)
 );
+
+The following SQL creates a new table called "GermanCustomers" (which is a copy of the "Customers" table): 
+Example
+CREATE TABLE GermanCustomers AS
+SELECT * FROM Customers
+WHERE Country = 'Germany';
+
+
 
 /*
 PRIMARY KEY
